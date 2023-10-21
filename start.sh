@@ -1,15 +1,19 @@
 #!/bin/bash
+
 echo "started"
+
 docmd() {
-    read -p "user@MyVPS:~ " CMD
+    read -p "root@MyVPS:~ " CMD
     eval "$CMD"
-    echo "user@MyVPS:~ "
+    echo "root@MyVPS:~ "
     docmd2
 }
+
 docmd2() {
-    read -p "user@MyVPS:~ " CMD2
+    read -p "root@MyVPS:~ " CMD2
     eval "$CMD2"
-    echo "user@MyVPS:~ "
+    echo "root@MyVPS:~ "
     docmd
 }
+
 docmd
